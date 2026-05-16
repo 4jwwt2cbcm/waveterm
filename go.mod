@@ -46,3 +46,8 @@ require (
 // are failing locally, make sure CGO is enabled and a C compiler (gcc/clang)
 // is available on PATH. On macOS: `xcode-select --install`. On Linux: install
 // build-essential or equivalent.
+
+// PERSONAL NOTE: On my M2 MacBook, I also need to set:
+//   CC=gcc CGO_ENABLED=1 go build ./...
+// Homebrew gcc can be installed via `brew install gcc` if the Xcode clang
+// toolchain causes linker issues with go-sqlite3.
