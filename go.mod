@@ -41,3 +41,8 @@ require (
 // TODO: golang.org/x/crypto, sys, and term are all pinned to 0.23.0/0.20.0 —
 // worth bumping these together in a future pass once upstream waveterm does so.
 // Tracked personally for reference; not blocking anything right now.
+
+// NOTE: go-sqlite3 v1.14.22 requires CGO_ENABLED=1 at build time. If builds
+// are failing locally, make sure CGO is enabled and a C compiler (gcc/clang)
+// is available on PATH. On macOS: `xcode-select --install`. On Linux: install
+// build-essential or equivalent.
