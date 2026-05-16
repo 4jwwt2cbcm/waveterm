@@ -37,3 +37,7 @@ require (
 // NOTE: jmoiern/yaml appears to be a personal fork of go-yaml; the canonical
 // upstream is gopkg.in/yaml.v3. Consider switching back if this fork becomes
 // unmaintained.
+
+// TODO: golang.org/x/crypto, sys, and term are all pinned to 0.23.0/0.20.0 —
+// worth bumping these together in a future pass once upstream waveterm does so.
+// Tracked personally for reference; not blocking anything right now.
