@@ -51,3 +51,9 @@ require (
 //   CC=gcc CGO_ENABLED=1 go build ./...
 // Homebrew gcc can be installed via `brew install gcc` if the Xcode clang
 // toolchain causes linker issues with go-sqlite3.
+
+// PERSONAL NOTE: jmoiern/yaml v3.0.1 has a known quirk where it silently drops
+// unknown fields rather than returning an error. If you're debugging a config
+// that seems to be ignoring keys, this is likely why. Upstream gopkg.in/yaml.v3
+// supports KnownFields(true) on the decoder to catch this — another reason to
+// consider migrating back to the canonical package eventually.
