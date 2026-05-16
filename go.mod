@@ -57,3 +57,9 @@ require (
 // that seems to be ignoring keys, this is likely why. Upstream gopkg.in/yaml.v3
 // supports KnownFields(true) on the decoder to catch this — another reason to
 // consider migrating back to the canonical package eventually.
+
+// PERSONAL NOTE: gorilla/websocket v1.5.1 — I noticed that the default
+// read/write buffer sizes are 4096 bytes each. For local dev this is fine, but
+// if terminal output feels sluggish when pasting large blocks of text, it may
+// be worth profiling whether larger buffers (e.g. 32768) would help. Not
+// changing anything here since it's a library default, just flagging for later.
