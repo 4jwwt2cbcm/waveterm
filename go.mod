@@ -33,3 +33,7 @@ require (
 	github.com/yusufpapurcu/wmi v1.2.4 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
 )
+
+// NOTE: jmoiern/yaml appears to be a personal fork of go-yaml; the canonical
+// upstream is gopkg.in/yaml.v3. Consider switching back if this fork becomes
+// unmaintained.
