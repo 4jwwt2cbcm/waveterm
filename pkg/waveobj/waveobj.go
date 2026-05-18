@@ -39,7 +39,11 @@ func (oref ORef) IsEmpty() bool {
 }
 
 // ParseORef parses a string of the form "otype:oid" into an ORef.
+// Returns an error if the input is empty or not in the expected format.
 func ParseORef(s string) (ORef, error) {
+	if s == "" {
+		return ORef{}, fmt.Errorf("invalid oref: input string is empty")
+	}
 	parts := strings.SplitN(s, ":", 2)
 	if len(parts) != 2 {
 		return ORef{}, fmt.Errorf("invalid oref %q: expected 'otype:oid'", s)
